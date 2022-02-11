@@ -1,0 +1,18 @@
+{
+  "name": "gitlab-finder",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Mathieu Delestre",
+  "license": "MIT",
+  "scripts": {
+    "search": "node src/search.js",
+    "replace": "node src/replace.js"
+  },
+  "dependencies": {
+    "@gitbeaker/node": "^35.4.0",
+    "axios": "^0.25.0",
+    "axios-rate-limit": "^1.3.0",
+    "dotenv": "^16.0.0",
+    "slugify": "^1.6.5"
+  }
+}
