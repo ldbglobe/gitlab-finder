@@ -1,4 +1,4 @@
-# Cli Gitlab Finder
+# NodeJS Cli Gitlab Finder
 
 Due to the Gitlab advanced search rate limiter, I was unable to use the CLI tools written by [Phillip Johnsen](https://github.com/phillipj/gitlab-search). So I wrote my own in NodeJS using the GitLab API NodeJS library [GitBeaker by Justin Dalrymple](https://github.com/jdalrymple/gitbeaker)
 
