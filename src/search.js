@@ -6,7 +6,8 @@ const slugify = require('slugify')
 
 const { Gitlab } = require('@gitbeaker/node');
 const api = new Gitlab({
-  token: process.env.API_TOKEN,
+	host: process.env.GITLAB_HOST,
+	token: process.env.GITLAB_TOKEN,
 });
 
 async function getGroups()
@@ -73,11 +74,11 @@ async function searchInProject(project,search)
 					name:project.name_with_namespace,
 					chunks:[],
 				}
-				await new Promise(resolve => setTimeout(resolve, 6000));
+				await new Promise(resolve => setTimeout(resolve, process.env.SEARCH_DELAY));
 
 				let filter = [process.env.SEARCH_KEYWORD]
-				if(process.env.SEARCH_FILE_EXTENSION)
-					filter.push('filename:*.'+process.env.SEARCH_FILE_EXTENSION);
+				if(process.env.SEARCH_FILE_PATTERN && process.env.SEARCH_FILE_PATTERN!='*')
+					filter.push('filename:'+process.env.SEARCH_FILE_PATTERN);
 
 				let results = await searchInProject(project,filter.join(' '));
 				for(let k=0; k<results.length; k++)
