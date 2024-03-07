@@ -49,8 +49,11 @@ async function searchInProject(project,search)
 		} catch(e) {
 		}
 	}
-
-	let groups = await getGroups();
+	if (!process.env.GROUP_ID) {
+		var groups = await getGroups()
+	}else{
+		var groups = [{id:process.env.GROUP_ID}]
+	}
 	for(let i=0; i<groups.length; i++)
 	{
 		let group = groups[i];
