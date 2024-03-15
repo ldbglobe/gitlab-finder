@@ -17,7 +17,7 @@ cp .env.sample .env
 
 ## 2. Configure
 
-Edit the ``.env`` to put your own personnal authtoken, search string and file extension (optionnal) before executing the script
+Edit the ``.env`` to put your own personnal authtoken, search string file extension and target group (optionnal) before executing the script
 
 ## 3. Execute
 
