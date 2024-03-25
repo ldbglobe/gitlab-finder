@@ -19,7 +19,15 @@ cp .env.sample .env
 
 Edit the ``.env`` to put your own personnal authtoken, search string file extension and target group (optionnal) before executing the script
 
-## 3. Execute
+## 3. Install
+
+Install packages.
+
+```bash
+yarn install
+```
+
+## 4. Execute
 
 ```bash
 yarn search
