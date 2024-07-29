@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const slugify = require('slugify')
 
-const { Gitlab } = require('@gitbeaker/node');
+const { Gitlab } = require('@gitbeaker/rest');
 const api = new Gitlab({
 	host: process.env.GITLAB_HOST,
 	token: process.env.GITLAB_TOKEN,
@@ -18,7 +18,7 @@ async function getGroups()
 }
 async function getGroupProjects(group)
 {
-	return await api.Groups.projects(group.id, {
+	return await api.Groups.allProjects(group.id, {
 		perPage:100,
 		include_subgroups:false,
 	});

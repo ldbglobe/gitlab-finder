@@ -11,7 +11,6 @@ Notice: due to the really low rate limit (10 request per minute) you may wait fo
 ```bash
 git clone git@github.com:ldbglobe/gitlab-finder.git
 cd gitlab-finder
-yarn
 cp .env.sample .env
 ```
 
@@ -19,8 +18,19 @@ cp .env.sample .env
 
 Edit the ``.env`` to put your own personnal authtoken, search string file extension and target group (optionnal) before executing the script
 
-## 3. Execute
+## 3. Execute with you prefered node package manager
 
 ```bash
+npm install # run once to install dependencies
+npm run search
+```
+
+```bash
+pnpm install # run once to install dependencies
+pnpm run search
+```
+
+```bash
+yarn # run once to install dependencies
 yarn search
 ```
