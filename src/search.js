@@ -73,8 +73,10 @@ async function searchInProject(project,search)
 			else
 			{
 				searchResults[project.id] = searchResults[project.id] || {
-					id: project.id,
-					name:project.name_with_namespace,
+					groupId:group?.id || null,
+					groupName:group?.name || null,
+					projectId: project.id,
+					projectName:project.name_with_namespace,
 					chunks:[],
 				}
 				await new Promise(resolve => setTimeout(resolve, process.env.SEARCH_DELAY));
