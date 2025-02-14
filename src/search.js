@@ -20,7 +20,7 @@ async function getGroupProjects(group)
 {
 	return await api.Groups.allProjects(group.id, {
 		perPage:100,
-		include_subgroups:false,
+		includeSubgroups: process.env.INCLUDE_SUBGROUP || false,
 	});
 }
 

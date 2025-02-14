@@ -8,13 +8,13 @@
     "search": "node src/search.js"
   },
   "dependencies": {
-    "@gitbeaker/rest": "^40.1.2",
-    "axios": "^1.7.2",
+    "@gitbeaker/rest": "^42.1.0",
+    "axios": "^1.7.9",
     "axios-rate-limit": "^1.4.0",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "slugify": "^1.6.6"
   },
   "volta": {
-    "node": "20.12.1"
+    "node": "22.14.0"
   }
 }
