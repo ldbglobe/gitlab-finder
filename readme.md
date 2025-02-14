@@ -18,19 +18,30 @@ cp .env.sample .env
 
 Edit the ``.env`` to put your own personnal authtoken, search string file extension and target group (optionnal) before executing the script
 
-## 3. Execute with you prefered node package manager
+## 3. Install with you prefered node package manager
+
+This step is only needed once
 
 ```bash
-npm install # run once to install dependencies
+npm install
+```
+```bash
+pnpm install
+```
+```bash
+yarn install
+```
+
+## 4. Execute with you prefered node package manager
+
+```bash
 npm run search
 ```
 
 ```bash
-pnpm install # run once to install dependencies
 pnpm run search
 ```
 
 ```bash
-yarn # run once to install dependencies
 yarn search
 ```
