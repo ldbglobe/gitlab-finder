@@ -9,39 +9,26 @@ Notice: due to the really low rate limit (10 request per minute) you may wait fo
 ## 1. Install
 
 ```bash
-git clone git@github.com:ldbglobe/gitlab-finder.git
-cd gitlab-finder
-cp .env.sample .env
+git clone git@github.com:ldbglobe/gitlab-finder.git \ 
+    && cd gitlab-finder \ 
+    && cp .env.sample .env \
 ```
 
 ## 2. Configure
 
-Edit the ``.env`` to put your own personnal authtoken, search string file extension and target group (optionnal) before executing the script
+Edit the ``.env`` to put your own personnal authtoken, gilab host instance and any default value you want to use for extra options
 
-## 3. Install with you prefered node package manager
+## 3. Install dependencies
 
-This step is only needed once
 
 ```bash
 npm install
 ```
-```bash
-pnpm install
-```
-```bash
-yarn install
-```
 
-## 4. Execute with you prefered node package manager
+## 4. Cli usage example
 
 ```bash
-npm run search
-```
-
-```bash
-pnpm run search
-```
-
-```bash
-yarn search
+node search --help
+node search -s test
+node search -s test -p "*.js"
 ```
