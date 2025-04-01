@@ -1,6 +1,6 @@
 {
   "name": "gitlab-finder",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "src/search.js",
   "author": "Mathieu Delestre",
   "license": "MIT",
